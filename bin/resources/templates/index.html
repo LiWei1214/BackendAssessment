@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+    <title>Title Aggregator</title>
+</head>
+<body>
+	<h1>
+		The Verge
+	</h1>
+    <ul>
+        <li th:each="headline : ${headlines}">
+            <a th:href="${headline.link}" th:text="${headline.title}" target="_blank"></a>
+            <span th:text="${headline.date}"></span>
+        </li>
+    </ul>
+</body>
+</html>
